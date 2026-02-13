@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/cdy
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+  data:
+    web:
+      pageable:
+        max-page-size: 20000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+      show_sql: true
+    sql:
+      init:
+        mode: never
+
+
+jwt:
+  secret: asdflkajsdgjqrewoitgujasdlkjadslgjasdfaa
+  accessTokenExpiresIn: 3600000
+  refreshTokenExpiresIn: 604800000
+
+logging:
+  config: classpath:logback-dev.xml
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
