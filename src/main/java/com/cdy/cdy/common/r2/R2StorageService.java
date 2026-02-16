@@ -1,4 +1,4 @@
-package com.localhub.localhub.r2;
+package com.cdy.cdy.common.r2;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

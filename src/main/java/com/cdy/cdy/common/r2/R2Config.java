@@ -1,6 +1,5 @@
-package com.localhub.localhub.config;
+package com.cdy.cdy.common.r2;
 
-import com.localhub.localhub.r2.StorageProps;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;

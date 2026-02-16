@@ -1,7 +1,9 @@
-package com.cdy.cdy.common.test;
+package com.cdy.cdy.common.auth;
 
+import com.cdy.cdy.admin.dto.UserRequestDto;
 import com.cdy.cdy.domain.users.repository.UserRepository;
 import com.cdy.cdy.security.jwt.JwtUtil;
+import com.cdy.cdy.security.jwt.RefreshRepositoryJPA;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,20 +27,15 @@ public class AuthService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
     private final JwtUtil jwtUtil;
-    private final RefreshRepository refreshRepository;
-    private final MailService mailService;
-    private final EmailVerificationRepository emailVerificationRepository;
+    private final RefreshRepositoryJPA refreshRepositoryJPA;
+//    private final MailService mailService;
+//    private final EmailVerificationRepository emailVerificationRepository;
     //회원가입
     @Transactional
-    public void Join(JoinDto joinDto) {
+    public void Join(UserRequestDto userRequestDto) {
 
-
-
-
-        String username = joinDto.getUsername();
-        String password = joinDto.getPassword();
-        UserType userType = joinDto.getUserType();
-        String phone = joinDto.getPhone();
+        String username = userRequestDto.getUsername();
+        String password = userRequestDto.getPassword();
 
         if (userType == null) {
             throw new IllegalArgumentException("userType은 필수값입니다.");

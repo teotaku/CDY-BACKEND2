@@ -58,6 +58,10 @@ dependencies {
 	//로깅
 	implementation 'net.logstash.logback:logstash-logback-encoder:7.4'
 
+    //r2
+    implementation 'software.amazon.awssdk:s3:2.25.40'
+    implementation 'software.amazon.awssdk:url-connection-client:2.25.40'
+
 }
 
 tasks.named('test') {

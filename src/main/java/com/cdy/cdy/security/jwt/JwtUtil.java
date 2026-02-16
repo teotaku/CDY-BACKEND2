@@ -17,8 +17,6 @@ public class JwtUtil {
 
     private SecretKey secretKey;
 
-    @Value("${jwt.secret}")
-    String secret;
 
 
     @Value("${jwt.accessTokenExpiresIn}")

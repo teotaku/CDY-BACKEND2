@@ -26,7 +26,7 @@ public class JwtService {
                         .build();
         int result = refreshRepositoryJDBC.save(entity);
         if (result == 0) {
-            throw new RuntimeException("サーバーエラーが発生しました。");
+            throw new RuntimeException("서버 에러 발생。");
         }
     }
     @Transactional(readOnly = true)
@@ -41,7 +41,7 @@ public class JwtService {
     public void deleteRefresh(String refreshToken) {
         int result = refreshRepositoryJDBC.delete(refreshToken);
         if (result == 0) {
-            throw new RuntimeException("サーバーエラーが発生しました。");
+            throw new RuntimeException("서버 에러 발생。");
         }
     }
 
@@ -50,7 +50,7 @@ public class JwtService {
 
         int result = refreshRepositoryJDBC.deleteByUsername(username);
         if (result == 0) {
-            throw new RuntimeException("サーバーエラーが発生しました。");
+            throw new RuntimeException("서버 에러 발생。");
         }
 
     }

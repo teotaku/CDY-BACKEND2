@@ -1,6 +1,7 @@
 package com.cdy.cdy.domain.study.entity;
 
 import com.cdy.cdy.common.entity.BaseEntity;
+import com.cdy.cdy.domain.study.dto.RequestStudy;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,4 +24,18 @@ public class Study extends BaseEntity {
 
     @Column(name = "content", nullable = false)
     private String content;
+
+    @Column(name = "is_deleted", nullable = false)
+    private Boolean isDeleted; //DB DEFAULT 조건으로 FALSE 지정.
+
+    public void setIsDeleted() {
+        this.isDeleted = true;
+    }
+
+    public void update(RequestStudy dto) {
+        this.title = dto.getTitle();
+        this.content =  dto.getContent();
+
+
+    }
 }

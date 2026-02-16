@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS users(
     user_category VARCHAR(50) NOT NULL,
     description TEXT,
     nickname VARCHAR(50) NOT NULL,
+    profile_image_key VARCHAR(255),
     is_deleted TINYINT(1) DEFAULT 0
 
 

@@ -1,6 +1,5 @@
-package com.localhub.localhub.r2;
+package com.cdy.cdy.common.r2;
 
-import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

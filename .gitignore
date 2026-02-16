@@ -35,3 +35,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+.env.dev
+.env*
+
+mysql_data/
+es_data/
+application.log

@@ -1,4 +1,4 @@
-package com.cdy.cdy.common.test;
+package com.cdy.cdy.common.auth;
 
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.Cookie;

@@ -3,7 +3,7 @@
 
     <appender name="LOGSTASH"
               class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>localhost:5044</destination>
+        <destination>localhost:5045</destination>
 
         <encoder class="net.logstash.logback.encoder.LogstashEncoder">
             <includeContext>true</includeContext>

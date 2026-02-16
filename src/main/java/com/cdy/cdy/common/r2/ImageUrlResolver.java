@@ -1,6 +1,5 @@
-package com.localhub.localhub.service;
+package com.cdy.cdy.common.r2;
 
-import com.localhub.localhub.r2.R2StorageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -1,5 +1,4 @@
-// src/main/java/com/cdy/cdy/controller/R2StorageController.java
-package com.localhub.localhub.r2;
+package com.cdy.cdy.common.r2;
 
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +8,7 @@ import java.net.URL;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/storage")
+@RequestMapping("/api/v1/storage")
 @RequiredArgsConstructor
 public class R2StorageController {
 

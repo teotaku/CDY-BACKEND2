@@ -20,6 +20,9 @@ public class Users {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+    @Column(name = "profile_image_key")
+    private String profileImageKey;
+
     @Column(name = "password") //비밀번호
     private String password;
 
