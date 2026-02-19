@@ -20,4 +20,42 @@ public interface UserRepository extends JpaRepository<Users,Long> {
 """)
     Optional<Users> findByUsername(@Param("username") String username);
 
+
+    /**
+     *  불린값 반환 3가지 케이스
+     *  case when + exists
+     *  case when + count
+     *  exists + native query
+     */
+    @Query("""
+SELECT CASE WHEN COUNT(u) > 0 
+       THEN true ELSE false END
+FROM Users u
+WHERE u.username = :username
+""")
+    boolean existsByUsername(String username);
+
+//    @Query("""
+//
+//                SELECT
+//                CASE WHEN
+//                EXISTS(
+//                SELECT 1
+//                FROM Users u
+//                WHERE u.username = :username
+//               )
+//                THEN true ELSE false
+//                END
+//                FROM Users x
+//            """)
+//    boolean existsByUsername(@Param("username") String username);
+
+//    @Query(value = """
+//SELECT EXISTS(
+//    SELECT 1
+//    FROM users u
+//    WHERE u.username = :username
+//)
+//""", nativeQuery = true)
+//    boolean existsByUsername(@Param("username") String username);
 }
