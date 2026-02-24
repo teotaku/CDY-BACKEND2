@@ -1,6 +1,7 @@
 package com.cdy.cdy.domain.study.dto;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,11 +19,17 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class ResponseStudyListByUser {
 
+    @Schema(description = "식별키")
     private Long id;
+    @Schema(description = "스터디제목")
     private String title;
+    @Schema(description = "스터디 내용")
     private String content;
+    @Schema(description = "작성날짜")
     private LocalDateTime createdAt;
+    @Schema(description = "작성자 프로필이미지 url")
     private String userProfileImageUrl;
+    @Schema(description = "첫번째 이미지 url")
     private String firstImageUrl;
 
 

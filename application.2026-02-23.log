@@ -1,0 +1,96 @@
+2026-02-23 13:52:05 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-23 13:52:05 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 21148 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-23 13:52:05 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-23 13:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-23 13:52:08 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 204 ms. Found 0 JDBC repository interfaces.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-23 13:52:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 205 ms. Found 5 JPA repository interfaces.
+2026-02-23 13:52:11 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-23 13:52:11 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-23 13:52:11 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-23 13:52:11 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-23 13:52:11 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 5688 ms
+2026-02-23 13:52:12 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-23 13:52:12 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-23 13:52:14 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-23 13:52:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-23 13:52:15 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63d9e1a
+2026-02-23 13:52:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-23 13:52:16 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-23 13:52:19 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-23 13:52:20 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-23 13:52:20 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-23 13:52:25 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-23 13:52:25 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-23 13:52:26 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-23 13:52:27 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-23 13:52:27 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 23.682 seconds (process running for 25.043)
+2026-02-23 13:52:42 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-23 13:52:42 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-23 13:52:42 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:43 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:52:44 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 930 ms
+2026-02-23 13:53:28 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:53:35 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:53:35 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-23 13:53:35 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-23 13:53:52 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:53:52 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-23 13:53:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-23 13:53:52 ERROR c.c.c.c.e.GlobalExceptionHandler - Cannot invoke "com.cdy.cdy.domain.users.entity.UserCategory.toString()" because the return value of "com.cdy.cdy.domain.users.entity.Users.getUserCategory()" is null
+2026-02-23 13:54:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-23 13:54:36 ERROR c.c.c.c.e.GlobalExceptionHandler - HV000030: No validator could be found for constraint 'jakarta.validation.constraints.NotBlank' validating type 'com.cdy.cdy.domain.users.entity.UserCategory'. Check configuration for 'userCategory'

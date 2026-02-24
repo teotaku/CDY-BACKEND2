@@ -1,34 +1,54 @@
 package com.cdy.cdy.admin.service;
 
-import com.cdy.cdy.admin.dto.UserRequestDto;
+import com.cdy.cdy.domain.users.dto.UserRequestDto;
+import com.cdy.cdy.domain.users.entity.UserRole;
 import com.cdy.cdy.domain.users.entity.Users;
 import com.cdy.cdy.domain.users.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class AdminService {
 
 
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     //관리자가 회원가입시키는 로직
-    public void join(UserRequestDto userRequestDto) {
+    public void createUser(String username,UserRequestDto userRequestDto) {
 
 
-        userRepository.findByUsername(userRequestDto.getUsername())
-                .orElseThrow(() -> new IllegalArgumentException("이미 존재하는 아이디입니다."));
+        Users admin = userRepository.findByUsername(username)
+                .orElseThrow(() -> {
+                    log.warn("[AdminService] 관리자 조회 실패 - username : {}", username);
+                   throw new UsernameNotFoundException("존재하지 않는 유저");
+                });
+
+
+        if (!admin.getRole().equals(UserRole.ADMIN)) {
+            log.warn("[AdminService] 관리자 권한 실패 - username : {}",username);
+            throw new IllegalArgumentException("관리자만 가능.");
+        }
+
+        if (userRepository.findByUsername(userRequestDto.getUsername()).isPresent()) {
+            log.warn("[AdminService] 유저 아이디 중복 username - {}", userRequestDto.getUsername());
+            throw new IllegalArgumentException("이미 존재하는 아이디입니다.");
+        }
 
         Users users = Users.builder()
-                .nickname(userRequestDto.getNickname())
-                .password(passwordEncoder.encode(userRequestDto.getPassword()))
-                .description(userRequestDto.getDescription())
                 .username(userRequestDto.getUsername())
+                .name(userRequestDto.getName())
+                .phoneNumber(userRequestDto.getPhoneNumber())
+                .userCategory(userRequestDto.getUserCategory())
+                .password(passwordEncoder.encode(userRequestDto.getPassword()))
                 .build();
 
         userRepository.save(users);
+        log.info("[AdminService] 유저 생성 , createdUsername : {} ",username );
 
     }
 }

@@ -1,6 +1,11 @@
 package com.cdy.cdy.security.config;
 
 import com.cdy.cdy.domain.users.entity.UserRole;
+import com.cdy.cdy.security.handler.CustomLogoutHandler;
+import com.cdy.cdy.security.jwt.JWTFilter;
+import com.cdy.cdy.security.jwt.JwtService;
+import com.cdy.cdy.security.jwt.JwtUtil;
+import com.cdy.cdy.security.jwt.LoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.access.hierarchicalroles.RoleHierarchy;
@@ -13,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -29,6 +35,10 @@ public class SecurityConfig {
     private final AuthenticationConfiguration authenticationConfiguration;
 
     private final AuthenticationSuccessHandler authenticationSuccessHandler;
+
+    private final JwtService jwtService;
+
+    private final JwtUtil jwtUtil;
 
 
     @Bean
@@ -58,6 +68,20 @@ public class SecurityConfig {
         http
                 .formLogin((auth) -> auth.disable());
 
+
+        // 필터 등록
+        http
+                .addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration), authenticationSuccessHandler),
+                        UsernamePasswordAuthenticationFilter.class);
+
+         http
+                .logout(logout ->
+                logout.addLogoutHandler
+                        (new CustomLogoutHandler(jwtService, jwtUtil)));
+
+        http
+                .addFilterBefore(new JWTFilter(jwtUtil), LoginFilter.class);
+
         return http.build();
     }
 
@@ -65,7 +89,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:5173"));
+        configuration.setAllowedOrigins(List.of("http://localhost:3000","https://www.codiyoung.com/"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

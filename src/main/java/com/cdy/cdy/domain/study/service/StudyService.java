@@ -56,6 +56,7 @@ public class StudyService {
             List<StudyImage> studyImageList = dto.getImageList().stream().map((imageDto) ->
 
                     StudyImage.builder()
+                            .studyId(study.getId())
                             .imageKey(imageDto.getImageKey())
                             .sortOrder(imageDto.getSortOrder())
                             .build()

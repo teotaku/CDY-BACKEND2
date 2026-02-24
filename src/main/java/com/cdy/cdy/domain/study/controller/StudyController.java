@@ -2,9 +2,16 @@ package com.cdy.cdy.domain.study.controller;
 
 import com.cdy.cdy.domain.study.dto.RequestStudy;
 import com.cdy.cdy.domain.study.dto.ResponseStudy;
+import com.cdy.cdy.domain.study.dto.ResponseStudyListByUser;
 import com.cdy.cdy.domain.study.service.StudyService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Response;
+import org.springdoc.core.annotations.ParameterObject;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
@@ -49,7 +56,7 @@ public class StudyController {
             이미지 마찬가지(이미지 list가 비어있을경우 이미지 전체삭제)
             """)
 
-    @PutMapping("/update/studyId")
+    @PutMapping("/update/{studyId}")
     public ResponseEntity<?> updateStudy(Authentication authentication, @PathVariable("studyId") Long studyId,
                                          @RequestBody RequestStudy dto) {
 
@@ -67,4 +74,18 @@ public class StudyController {
         return ResponseEntity.ok(responseStudy);
 
     }
+
+    @Operation(summary = "유저의 스터디 작성 목록 조회", description = """
+            로그인한 유저의 작성한 전체 스터디목록 조회
+            """)
+    @GetMapping("/findByUser")
+    public ResponseEntity<?> findByUser(Authentication authentication,
+                                        @PageableDefault(page = 0, size = 5, sort = "createdAt", direction = Sort.Direction.DESC
+                                        ) Pageable pageable
+    ) {
+
+        Page<ResponseStudyListByUser> result = studyService.findByUser(authentication.getName(), pageable);
+        return ResponseEntity.ok(result);
+    }
+
 }

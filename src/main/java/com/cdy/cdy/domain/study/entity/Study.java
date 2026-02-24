@@ -25,8 +25,9 @@ public class Study extends BaseEntity {
     @Column(name = "content", nullable = false)
     private String content;
 
+    @Builder.Default
     @Column(name = "is_deleted", nullable = false)
-    private Boolean isDeleted; //DB DEFAULT 조건으로 FALSE 지정.
+    private Boolean isDeleted = false; //DB DEFAULT 조건으로 FALSE 지정.
 
     public void setIsDeleted() {
         this.isDeleted = true;

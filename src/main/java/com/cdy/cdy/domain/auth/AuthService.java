@@ -1,6 +1,6 @@
 package com.cdy.cdy.domain.auth;
 
-import com.cdy.cdy.admin.dto.UserRequestDto;
+import com.cdy.cdy.domain.users.dto.UserRequestDto;
 import com.cdy.cdy.domain.users.entity.Users;
 import com.cdy.cdy.domain.users.repository.UserRepository;
 import com.cdy.cdy.domain.users.service.UserService;
@@ -20,6 +20,35 @@ public class AuthService {
     private final UserRepository userRepository;
     private final JwtUtil jwtUtil;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+
+
+    //회원가입 로직
+    public void signUp(UserRequestDto dto) {
+
+        boolean existsByUsername = userRepository.existsByUsername(dto.getUsername());
+
+        if (existsByUsername) {
+            throw new IllegalArgumentException("이미 존재하는 아이디입니다.");
+        }
+
+        Users users = Users.builder()
+                .username(dto.getUsername())
+                .password(bCryptPasswordEncoder.encode(dto.getPassword()))
+                .nickname(dto.getNickname())
+                .isDeleted(false)
+                .userCategory(dto.getUserCategory())
+                .build();
+
+        userRepository.save(users);
+
+    }
+
+
+
+
+
+
+   //로그인 로직
     public String login(UserRequestDto userRequestDto) {
 
 
@@ -34,7 +63,9 @@ public class AuthService {
 
         return jwt;
 
-
     }
+
+
+
 
 }

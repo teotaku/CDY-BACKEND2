@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/storage")
+@RequestMapping("/api/v1/image")
 @RequiredArgsConstructor
 public class R2StorageController {
 

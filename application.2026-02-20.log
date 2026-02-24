@@ -1,0 +1,2858 @@
+2026-02-20 17:35:24 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 17:35:24 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 30276 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 17:35:24 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 17:35:26 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:35:26 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 187 ms. Found 0 JDBC repository interfaces.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 17:35:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 191 ms. Found 5 JPA repository interfaces.
+2026-02-20 17:35:28 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 17:35:28 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:35:28 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 17:35:28 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 17:35:29 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4117 ms
+2026-02-20 17:35:29 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 17:35:29 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 17:35:31 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 17:35:31 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 17:35:32 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7aef8000
+2026-02-20 17:35:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 17:35:32 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 17:35:35 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 17:35:35 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 17:35:36 WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm" via JDBC [Table 'cdy.daily_attendance' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm" via JDBC [Table 'cdy.daily_attendance' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:81)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:218)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:204)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:473)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:237)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:210)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:182)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:152)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:227)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:976)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.cdy.cdy.CdyApplication.main(CdyApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'cdy.daily_attendance' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:837)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:685)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:76)
+	... 40 common frames omitted
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER'),
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:35:36 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 17:35:37 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 17:35:37 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 17:35:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 17:35:37 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 17:35:41 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 17:35:41 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 17:35:42 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:35:42 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 17:35:42 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 19.719 seconds (process running for 20.872)
+2026-02-20 17:40:45 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 17:40:45 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 17:40:45 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-20 17:40:45 WARN  o.s.web.servlet.PageNotFound - No mapping for GET /
+2026-02-20 17:40:46 WARN  o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2026-02-20 17:41:01 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 709 ms
+2026-02-20 17:41:15 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:41:15 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [null]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$29KD87/GrogsoB2H0r5dS.1cKe3FpF.q1jbXBGcuagzbdABzJXRuy]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [null]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 17:41:15 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 17:41:20 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:41:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:41:20 ERROR c.c.c.c.e.GlobalExceptionHandler - Cannot invoke "com.cdy.cdy.domain.users.entity.UserRole.toString()" because the return value of "com.cdy.cdy.domain.users.entity.Users.getRole()" is null
+2026-02-20 17:42:52 WARN  o.s.web.servlet.PageNotFound - No mapping for POST /login
+2026-02-20 17:46:53 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 17:46:53 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 16008 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 17:46:53 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 141 ms. Found 0 JDBC repository interfaces.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 17:46:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 5 JPA repository interfaces.
+2026-02-20 17:46:56 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 17:46:57 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:46:57 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 17:46:57 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 17:46:57 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4021 ms
+2026-02-20 17:46:57 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 17:46:58 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 17:47:00 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 17:47:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 17:47:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7aef8000
+2026-02-20 17:47:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 17:47:01 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 17:47:04 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 17:47:04 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER'),
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 17:47:05 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 17:47:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 17:47:05 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 17:47:10 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 17:47:10 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 17:47:12 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:47:12 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 17:47:12 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 21.066 seconds (process running for 22.119)
+2026-02-20 17:47:38 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 17:47:38 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 17:47:38 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-20 17:47:39 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 745 ms
+2026-02-20 17:47:42 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:47:42 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:48:45 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:48:45 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:49:03 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:49:03 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [null]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$qK39tftoouH1fZ8sXEI9sOiotuvgj13VUfZx/9BdgUMUMCp7WSoA2]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [null]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 17:49:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 17:49:06 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:49:06 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:49:06 ERROR c.cdy.cdy.security.jwt.LoginFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Cannot invoke "java.lang.Boolean.equals(Object)" because the return value of "com.cdy.cdy.domain.users.entity.Users.getIsDeleted()" is null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:143)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:183)
+	at com.cdy.cdy.security.jwt.LoginFilter.attemptAuthentication(LoginFilter.java:79)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:249)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.equals(Object)" because the return value of "com.cdy.cdy.domain.users.entity.Users.getIsDeleted()" is null
+	at com.cdy.cdy.domain.users.service.UserService.loadUserByUsername(UserService.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.cdy.cdy.domain.users.service.UserService$$SpringCGLIB$$0.loadUserByUsername(<generated>)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 60 common frames omitted
+2026-02-20 17:51:36 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string2]
+2026-02-20 17:51:36 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [null]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$zZ51UGU1X/LJJx30VRKpr.BBJccyD8f3iXEg7sVC3bz3FLuRjT/oW]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [null]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 17:51:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string2]
+2026-02-20 17:51:39 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:51:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string2]
+2026-02-20 17:51:39 WARN  c.c.c.c.e.GlobalExceptionHandler - 이미 존재하는 아이디입니다.
+2026-02-20 17:51:47 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:51:47 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string2]
+2026-02-20 17:51:47 ERROR c.cdy.cdy.security.jwt.LoginFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Cannot invoke "java.lang.Boolean.equals(Object)" because the return value of "com.cdy.cdy.domain.users.entity.Users.getIsDeleted()" is null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:143)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:183)
+	at com.cdy.cdy.security.jwt.LoginFilter.attemptAuthentication(LoginFilter.java:79)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:249)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.equals(Object)" because the return value of "com.cdy.cdy.domain.users.entity.Users.getIsDeleted()" is null
+	at com.cdy.cdy.domain.users.service.UserService.loadUserByUsername(UserService.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.cdy.cdy.domain.users.service.UserService$$SpringCGLIB$$0.loadUserByUsername(<generated>)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 60 common frames omitted
+2026-02-20 17:52:51 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string3]
+2026-02-20 17:52:51 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [null]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$UaaFtE0Th4fswGeoLA5xiOlaCWSbi2yXGwxjku0LH9BrTqFWEL852]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [null]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 17:52:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string3]
+2026-02-20 17:55:42 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 17:55:43 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 22104 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 17:55:43 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 17:55:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:55:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 0 JDBC repository interfaces.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 17:55:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 139 ms. Found 5 JPA repository interfaces.
+2026-02-20 17:55:46 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 17:55:46 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:55:46 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 17:55:46 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 17:55:46 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3575 ms
+2026-02-20 17:55:47 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 17:55:47 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 17:55:49 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 17:55:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 17:55:50 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7aef8000
+2026-02-20 17:55:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 17:55:50 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 17:55:52 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit not null,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER'),
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 17:55:53 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 17:55:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 17:55:54 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 17:55:57 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 17:55:57 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 17:55:59 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:55:59 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 17:55:59 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 18.094 seconds (process running for 19.307)
+2026-02-20 17:56:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 17:56:13 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 17:56:13 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-20 17:56:13 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:56:13 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:56:14 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$UOCI75noe9wmSKRI17/u3.ScYytP4Txs8CWQ/PlK0RSq2Ae3tVom.]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [null]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 17:56:14 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 17:56:19 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:56:19 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:56:19 ERROR c.cdy.cdy.security.jwt.LoginFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Cannot invoke "com.cdy.cdy.domain.users.entity.UserRole.name()" because the return value of "com.cdy.cdy.domain.users.entity.Users.getRole()" is null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:119)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:143)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:183)
+	at com.cdy.cdy.security.jwt.LoginFilter.attemptAuthentication(LoginFilter.java:79)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:249)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.NullPointerException: Cannot invoke "com.cdy.cdy.domain.users.entity.UserRole.name()" because the return value of "com.cdy.cdy.domain.users.entity.Users.getRole()" is null
+	at com.cdy.cdy.domain.users.service.UserService.loadUserByUsername(UserService.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.cdy.cdy.domain.users.service.UserService$$SpringCGLIB$$0.loadUserByUsername(<generated>)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:104)
+	... 60 common frames omitted
+2026-02-20 17:57:35 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 17:57:35 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 28344 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 17:57:35 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 17:57:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 138 ms. Found 0 JDBC repository interfaces.
+2026-02-20 17:57:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 17:57:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 17:57:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 207 ms. Found 5 JPA repository interfaces.
+2026-02-20 17:57:39 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 17:57:39 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:57:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 17:57:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 17:57:39 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3601 ms
+2026-02-20 17:57:39 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 17:57:40 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 17:57:41 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 17:57:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 17:57:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7aef8000
+2026-02-20 17:57:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 17:57:42 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 17:57:45 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit not null,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER'),
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 17:57:45 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 17:57:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 17:57:46 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 17:57:49 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 17:57:49 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 17:57:51 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 17:57:51 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 17:57:51 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 17.385 seconds (process running for 18.481)
+2026-02-20 17:57:57 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 17:57:57 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 17:57:57 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-02-20 17:57:58 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:57:58 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$fHcyvYyJQ/DY9CH6sU2AleDekrFl/XrqiJlQnusEueq0QsGuThQ9.]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [USER]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 17:57:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 17:58:09 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 17:58:09 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 17:58:09 INFO  c.cdy.cdy.security.jwt.LoginFilter - successfulAuthentication 호출
+2026-02-20 18:02:04 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:02:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:04:03 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 18:04:03 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 5452 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 18:04:03 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 149 ms. Found 0 JDBC repository interfaces.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 18:04:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 5 JPA repository interfaces.
+2026-02-20 18:04:07 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 18:04:07 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:04:07 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 18:04:07 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 18:04:08 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4113 ms
+2026-02-20 18:04:08 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 18:04:08 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 18:04:10 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 18:04:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 18:04:10 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b8cde43
+2026-02-20 18:04:10 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 18:04:11 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 18:04:13 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit not null,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER') not null,
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:04:13 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 18:04:14 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 18:04:14 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 18:04:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 18:04:14 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 18:04:18 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 18:04:18 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 18:04:19 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:04:19 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 18:04:19 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 17.49 seconds (process running for 18.642)
+2026-02-20 18:04:49 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 18:04:49 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 18:04:49 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-20 18:04:50 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 744 ms
+2026-02-20 18:04:55 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:04:55 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$pnyoLDCEaZHaEhpo0tvutu5ptIGp.uyJuR4cSyl0skCHlC.aBOrYO]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [USER]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 18:04:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 18:05:00 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:05:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:05:20 ERROR c.c.c.c.e.GlobalExceptionHandler - Cannot invoke "org.springframework.security.core.Authentication.getName()" because "authentication" is null
+2026-02-20 18:08:06 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 18:08:07 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 25428 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 18:08:07 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131 ms. Found 0 JDBC repository interfaces.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 18:08:09 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 135 ms. Found 5 JPA repository interfaces.
+2026-02-20 18:08:10 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 18:08:10 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:08:10 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 18:08:10 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 18:08:10 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3632 ms
+2026-02-20 18:08:11 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 18:08:11 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 18:08:12 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 18:08:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 18:08:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b5d1d9
+2026-02-20 18:08:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 18:08:13 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 18:08:15 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:08:15 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:08:16 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit not null,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER') not null,
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:08:16 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 18:08:16 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 18:08:16 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 18:08:16 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 18:08:16 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 18:08:19 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 18:08:19 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 18:08:21 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:08:21 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 18:08:21 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 15.88 seconds (process running for 17.219)
+2026-02-20 18:08:43 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 18:08:43 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 18:08:43 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-20 18:08:43 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:08:44 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:08:44 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$3N2HBzcnmf6CpaqgEXbmNuGb0b4oMmAhgqzkgOijOhWEqMLQtIPLO]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [USER]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 18:08:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 18:08:48 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:08:48 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:08:48 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:08:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:08:57 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:08:57 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [null]
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [null]
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string]
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [null]
+2026-02-20 18:08:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 18:08:58 WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 1048, SQLState: 23000
+2026-02-20 18:08:58 WARN  org.hibernate.orm.jdbc.error - Column 'is_deleted' cannot be null
+2026-02-20 18:08:58 ERROR c.c.c.c.e.GlobalExceptionHandler - could not execute statement [Column 'is_deleted' cannot be null] [insert into study (content,created_at,is_deleted,title,updated_at,user_id) values (?,?,?,?,?,?)]; SQL [insert into study (content,created_at,is_deleted,title,updated_at,user_id) values (?,?,?,?,?,?)]; constraint [is_deleted]
+2026-02-20 18:10:41 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 18:10:41 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 13040 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 18:10:41 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 0 JDBC repository interfaces.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 18:10:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 143 ms. Found 5 JPA repository interfaces.
+2026-02-20 18:10:45 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 18:10:45 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:10:45 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 18:10:45 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 18:10:45 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4034 ms
+2026-02-20 18:10:46 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 18:10:46 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 18:10:48 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 18:10:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 18:10:49 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b5d1d9
+2026-02-20 18:10:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 18:10:49 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 18:10:51 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 18:10:51 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 18:10:51 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 18:10:51 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit not null,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER') not null,
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 18:10:52 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 18:10:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 18:10:52 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 18:10:55 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 18:10:56 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 18:10:57 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:10:57 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 18:10:57 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 17.394 seconds (process running for 18.65)
+2026-02-20 18:11:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 18:11:41 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 18:11:41 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-20 18:11:42 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:42 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:11:42 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:11:42 WARN  c.c.c.c.e.GlobalExceptionHandler - 유저를 찾을 수 없습니다.
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:54 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:11:55 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 681 ms
+2026-02-20 18:12:03 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:12:03 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:12:03 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$dT4gxEktq8qpraqzXWQ5IuJ642HoHm3H1VTcUCfSUXx7mswJNDSM.]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [USER]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 18:12:03 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 18:12:07 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:12:07 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:12:07 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:12:16 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:12:16 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:12:16 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [null]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [null]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 18:12:16 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 18:12:16 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 18:12:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:12:36 DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.content,
+        s1_0.created_at,
+        s1_0.is_deleted,
+        s1_0.title,
+        s1_0.updated_at,
+        s1_0.user_id 
+    from
+        study s1_0 
+    where
+        s1_0.id=?
+2026-02-20 18:12:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:12:36 DEBUG org.hibernate.SQL - 
+    select
+        si1_0.id,
+        si1_0.imagekey,
+        si1_0.sort_order,
+        si1_0.study_id 
+    from
+        study_image si1_0 
+    where
+        si1_0.study_id=?
+2026-02-20 18:12:36 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:15:44 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 18:15:45 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 15428 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 18:15:45 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 0 JDBC repository interfaces.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 18:15:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 124 ms. Found 5 JPA repository interfaces.
+2026-02-20 18:15:48 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 18:15:48 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:15:48 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 18:15:48 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 18:15:49 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3915 ms
+2026-02-20 18:15:49 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 18:15:49 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 18:15:50 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 18:15:50 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 18:15:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@747f0f34
+2026-02-20 18:15:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 18:15:51 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 18:15:53 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 18:15:53 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       drop 
+       foreign key FKivpnstyan5snhyd2rxyghl4jm
+2026-02-20 18:15:53 DEBUG org.hibernate.SQL - 
+    drop table if exists daily_attendance
+2026-02-20 18:15:53 DEBUG org.hibernate.SQL - 
+    drop table if exists jwt_refresh_entity
+2026-02-20 18:15:53 DEBUG org.hibernate.SQL - 
+    drop table if exists study
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    drop table if exists study_image
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    drop table if exists users
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    create table daily_attendance (
+        check_date date not null,
+        checked_at datetime(6) not null,
+        id bigint not null auto_increment,
+        user_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    create table jwt_refresh_entity (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        refresh varchar(255) not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    create table study (
+        is_deleted bit not null,
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    create table study_image (
+        sort_order integer,
+        id bigint not null auto_increment,
+        study_id bigint,
+        imagekey varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    create table users (
+        is_deleted bit not null,
+        id bigint not null auto_increment,
+        description varchar(255),
+        nickname varchar(255),
+        password varchar(255),
+        profile_image_key varchar(255),
+        username varchar(255),
+        role enum ('ADMIN','USER') not null,
+        user_category enum ('CODING','DESIGN','EDITING'),
+        primary key (id)
+    ) engine=InnoDB
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint uk_attendance_user_date unique (user_id, check_date)
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    alter table jwt_refresh_entity 
+       add constraint uk_username_refresh unique (username, refresh)
+2026-02-20 18:15:54 DEBUG org.hibernate.SQL - 
+    alter table daily_attendance 
+       add constraint FKivpnstyan5snhyd2rxyghl4jm 
+       foreign key (user_id) 
+       references users (id)
+2026-02-20 18:15:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 18:15:54 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 18:15:57 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 18:15:58 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 18:15:59 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:15:59 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 18:15:59 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 16.289 seconds (process running for 17.421)
+2026-02-20 18:29:57 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 18:29:57 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 18:29:57 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-20 18:29:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:57 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:58 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:58 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:58 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:29:59 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 891 ms
+2026-02-20 18:30:03 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:30:04 DEBUG org.hibernate.SQL - 
+    select
+        case 
+            when count(u1_0.id)>0 
+                then true 
+            else false 
+    end 
+from
+    users u1_0 
+where
+    u1_0.username=?
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:30:04 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (description, is_deleted, nickname, password, profile_image_key, role, user_category, username) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [null]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [string]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [$2a$10$BL9Uhe4fbXNIlJKfTAOjMOBmK9qvWudWzoN8ikdUEfBvEzOTaizeK]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:VARCHAR) <- [null]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:ENUM) <- [USER]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (7:ENUM) <- [null]
+2026-02-20 18:30:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (8:VARCHAR) <- [string]
+2026-02-20 18:30:09 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:30:09 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:30:09 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:30:18 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:30:18 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:30:18 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T18:30:18.837946200]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T18:30:18.837946200]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 18:30:18 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 18:30:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 18:30:24 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:30:24 DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.content,
+        s1_0.created_at,
+        s1_0.is_deleted,
+        s1_0.title,
+        s1_0.updated_at,
+        s1_0.user_id 
+    from
+        study s1_0 
+    where
+        s1_0.id=?
+2026-02-20 18:30:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:30:24 DEBUG org.hibernate.SQL - 
+    select
+        si1_0.id,
+        si1_0.imagekey,
+        si1_0.sort_order,
+        si1_0.study_id 
+    from
+        study_image si1_0 
+    where
+        si1_0.study_id=?
+2026-02-20 18:30:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:31:45 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 18:31:45 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 15280 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 18:31:45 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 161 ms. Found 0 JDBC repository interfaces.
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 18:31:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 18:31:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 157 ms. Found 5 JPA repository interfaces.
+2026-02-20 18:31:49 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 18:31:49 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:31:49 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 18:31:49 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 18:31:50 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4644 ms
+2026-02-20 18:31:50 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 18:31:50 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 18:31:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 18:31:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 18:31:53 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@747f0f34
+2026-02-20 18:31:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 18:31:53 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 18:31:56 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 18:31:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 18:31:56 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 18:31:59 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 18:31:59 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 18:32:00 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 18:32:00 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 18:32:00 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 17.402 seconds (process running for 18.507)
+2026-02-20 18:32:39 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 18:32:39 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 18:32:39 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-20 18:32:39 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:39 ERROR c.c.c.c.e.GlobalExceptionHandler - Method parameter 'studyId': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "studyId"
+2026-02-20 18:32:44 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:45 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 650 ms
+2026-02-20 18:32:53 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:32:54 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:32:54 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:33:11 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:33:11 ERROR c.c.c.c.e.GlobalExceptionHandler - JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+2026-02-20 18:33:13 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:33:13 ERROR c.c.c.c.e.GlobalExceptionHandler - JSON parse error: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
+2026-02-20 18:33:30 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:33:30 DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.content,
+        s1_0.created_at,
+        s1_0.is_deleted,
+        s1_0.title,
+        s1_0.updated_at,
+        s1_0.user_id 
+    from
+        study s1_0 
+    where
+        s1_0.id=?
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:33:30 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:33:30 DEBUG org.hibernate.SQL - 
+    delete si1_0 
+    from
+        study_image si1_0 
+    where
+        si1_0.study_id=?
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:33:30 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [1]
+2026-02-20 18:33:30 DEBUG org.hibernate.SQL - 
+    update
+        study 
+    set
+        content=?,
+        is_deleted=?,
+        title=?,
+        updated_at=?,
+        user_id=? 
+    where
+        id=?
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [change]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [false]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [change]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:TIMESTAMP) <- [2026-02-20T18:33:30.947066900]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [1]
+2026-02-20 18:33:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 18:34:04 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:34:04 DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.content,
+        s1_0.created_at,
+        s1_0.is_deleted,
+        s1_0.title,
+        s1_0.updated_at,
+        s1_0.user_id 
+    from
+        study s1_0 
+    where
+        s1_0.id=?
+2026-02-20 18:34:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:34:04 DEBUG org.hibernate.SQL - 
+    select
+        si1_0.id,
+        si1_0.imagekey,
+        si1_0.sort_order,
+        si1_0.study_id 
+    from
+        study_image si1_0 
+    where
+        si1_0.study_id=?
+2026-02-20 18:34:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:34:51 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:34:51 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 18:34:51 DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.content,
+        s1_0.created_at,
+        s1_0.is_deleted,
+        s1_0.title,
+        s1_0.updated_at,
+        s1_0.user_id 
+    from
+        study s1_0 
+    where
+        s1_0.id=?
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:34:51 DEBUG org.hibernate.SQL - 
+    update
+        study 
+    set
+        content=?,
+        is_deleted=?,
+        title=?,
+        updated_at=?,
+        user_id=? 
+    where
+        id=?
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [change]
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BOOLEAN) <- [true]
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [change]
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:TIMESTAMP) <- [2026-02-20T18:34:51.803463200]
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:BIGINT) <- [1]
+2026-02-20 18:34:51 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 18:34:55 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 18:34:55 DEBUG org.hibernate.SQL - 
+    select
+        s1_0.id,
+        s1_0.content,
+        s1_0.created_at,
+        s1_0.is_deleted,
+        s1_0.title,
+        s1_0.updated_at,
+        s1_0.user_id 
+    from
+        study s1_0 
+    where
+        s1_0.id=?
+2026-02-20 18:34:55 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 18:34:55 WARN  c.c.c.c.e.GlobalExceptionHandler - 삭제된 스터디
+2026-02-20 19:17:13 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 19:17:13 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 22852 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 19:17:13 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 149 ms. Found 0 JDBC repository interfaces.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 19:17:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 5 JPA repository interfaces.
+2026-02-20 19:17:17 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 19:17:17 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 19:17:17 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 19:17:17 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 19:17:17 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4527 ms
+2026-02-20 19:17:18 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 19:17:18 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 19:17:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 19:17:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 19:17:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a5ed225
+2026-02-20 19:17:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 19:17:21 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 19:17:24 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 19:17:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 19:17:25 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 19:17:29 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 19:17:29 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 19:17:31 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 19:17:31 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 19:17:31 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 19.809 seconds (process running for 20.896)
+2026-02-20 19:17:35 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 19:17:35 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 19:17:35 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-02-20 19:17:35 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:36 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:37 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 800 ms
+2026-02-20 19:17:43 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:17:44 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:17:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:18:48 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:18:48 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:18:48 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:07 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:07 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:07 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:07 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 19:19:07 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 19:19:07 WARN  o.s.d.w.c.SpringDataJackson3Configuration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-02-20 19:19:17 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:17 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:17 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:18 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T19:19:17.953898200]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T19:19:17.953898200]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 19:19:18 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 19:19:18 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 19:19:20 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:20 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:20 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T19:19:20.411782400]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T19:19:20.411782400]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 19:19:20 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 19:19:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 19:19:21 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:21 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:21 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T19:19:21.304834300]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T19:19:21.304834300]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 19:19:21 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 19:19:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 19:19:24 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:24 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:24 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 19:19:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 19:19:39 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:39 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:39 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string2]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T19:19:39.807750400]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string2]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T19:19:39.807750400]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 19:19:39 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 19:19:39 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 19:19:44 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:19:44 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:44 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string3]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T19:19:44.600783500]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string3]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T19:19:44.600783500]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 19:19:44 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [0]
+2026-02-20 19:19:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 19:20:17 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:20:17 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:20:17 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:20:17 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 19:20:17 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 19:20:23 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:20:23 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:20:23 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:20:23 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 19:20:23 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 19:20:47 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:20:47 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:20:47 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:20:47 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 19:20:47 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 19:59:21 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:59:21 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:59:21 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string4]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T19:59:21.380682900]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string4]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T19:59:21.380682900]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 19:59:21 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2026-02-20 19:59:21 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [null]
+2026-02-20 19:59:23 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 19:59:23 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 19:59:23 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 19:59:23 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 19:59:23 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 20:05:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 20:05:10 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 26836 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 20:05:10 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 0 JDBC repository interfaces.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 20:05:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 5 JPA repository interfaces.
+2026-02-20 20:05:14 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 20:05:14 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 20:05:14 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 20:05:14 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 20:05:15 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4188 ms
+2026-02-20 20:05:15 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 20:05:15 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 20:05:17 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 20:05:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 20:05:18 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@747f0f34
+2026-02-20 20:05:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 20:05:18 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 20:05:20 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 20:05:21 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 20:05:21 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 20:05:25 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 20:05:25 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 20:05:27 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 20:05:27 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 20:05:27 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 18.203 seconds (process running for 19.32)
+2026-02-20 20:05:45 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 20:05:45 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 20:05:45 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-02-20 20:05:46 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 20:05:46 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 20:05:46 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study
+        (content, created_at, is_deleted, title, updated_at, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string5]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:TIMESTAMP) <- [2026-02-20T20:05:46.853069]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BOOLEAN) <- [false]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [string5]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (5:TIMESTAMP) <- [2026-02-20T20:05:46.853069]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (6:BIGINT) <- [1]
+2026-02-20 20:05:46 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        study_image
+        (imagekey, sort_order, study_id) 
+    values
+        (?, ?, ?)
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2026-02-20 20:05:46 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [8]
+2026-02-20 20:05:52 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 20:05:52 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.description,
+        u1_0.is_deleted,
+        u1_0.nickname,
+        u1_0.password,
+        u1_0.profile_image_key,
+        u1_0.role,
+        u1_0.user_category,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-02-20 20:05:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [string]
+2026-02-20 20:05:52 DEBUG org.hibernate.SQL - 
+    select
+        count(s1_0.id) 
+    from
+        study s1_0 
+    where
+        s1_0.user_id=? 
+        and s1_0.is_deleted=false
+2026-02-20 20:05:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [1]
+2026-02-20 20:05:52 WARN  o.s.d.w.c.SpringDataJackson3Configuration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-02-20 21:31:14 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-02-20 21:31:14 INFO  com.cdy.cdy.CdyApplication - Starting CdyApplication using Java 21.0.9 with PID 24912 (C:\Users\home\Desktop\develope\backend\CDY-BACKEND2\build\classes\java\main started by home in C:\Users\home\Desktop\develope\backend\CDY-BACKEND2)
+2026-02-20 21:31:14 INFO  com.cdy.cdy.CdyApplication - The following 1 profile is active: "local"
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.attendance.repository.AttendanceRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyImageRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.study.repository.StudyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.domain.users.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.cdy.cdy.security.jwt.RefreshRepositoryJPA; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2026-02-20 21:31:16 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 0 JDBC repository interfaces.
+2026-02-20 21:31:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-20 21:31:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-20 21:31:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 5 JPA repository interfaces.
+2026-02-20 21:31:18 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-20 21:31:18 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-20 21:31:18 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-20 21:31:18 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-20 21:31:18 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4388 ms
+2026-02-20 21:31:19 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-02-20 21:31:19 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-02-20 21:31:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-20 21:31:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-20 21:31:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4440750
+2026-02-20 21:31:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-20 21:31:21 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3307/cdy]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: cdy/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-20 21:31:24 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-20 21:31:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-20 21:31:24 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-20 21:31:28 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-20 21:31:28 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userService
+2026-02-20 21:31:29 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-20 21:31:29 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-20 21:31:30 INFO  com.cdy.cdy.CdyApplication - Started CdyApplication in 17.263 seconds (process running for 18.459)
+2026-02-20 21:39:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-20 21:39:46 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-20 21:39:46 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-02-20 21:39:46 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
+2026-02-20 21:39:46 ERROR c.c.c.c.e.GlobalExceptionHandler - Request method 'GET' is not supported
+2026-02-20 21:39:53 INFO  com.cdy.cdy.security.jwt.JWTFilter - jwt필터 호출
